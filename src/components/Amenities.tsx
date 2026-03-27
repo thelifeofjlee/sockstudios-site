@@ -17,7 +17,7 @@ const included = [
 const addOns = [
   { item: '6ft fold out plastic table', price: '$15/item' },
   { item: 'Cyc wall repaint', price: '$50/item' },
-  { item: 'Overnight storage', price: '$500/item' },
+  { item: 'Overnight storage', price: '$200/item' },
   { item: 'Plastic ice bucket', price: '$10/item' },
   { item: 'DJ stand', price: '$50/item' },
   { item: 'PA speaker', price: '$40/item' },

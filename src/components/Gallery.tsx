@@ -31,9 +31,32 @@ export default function Gallery() {
     <section id="gallery" className="py-24 px-6 bg-[#111]">
       <div className="max-w-7xl mx-auto">
         <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">The Space</p>
-        <h2 className="text-4xl md:text-5xl font-bold mb-16">See it for yourself.</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-16">The Space</h2>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+        {/* Mobile: horizontal swipe carousel */}
+        <div className="sm:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 scrollbar-hide">
+          {images.map((img, i) => (
+            <div
+              key={img.src}
+              className="flex-shrink-0 w-[80vw] snap-start cursor-pointer overflow-hidden rounded-sm"
+              onClick={() => openLightbox(i)}
+            >
+              <div className="relative w-full aspect-[4/3] bg-white/5">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover"
+                  sizes="80vw"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: masonry grid */}
+        <div className="hidden sm:block columns-2 lg:columns-3 gap-4 space-y-4">
           {images.map((img, i) => (
             <div
               key={img.src}
@@ -46,7 +69,7 @@ export default function Gallery() {
                   alt={img.alt}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 1024px) 50vw, 33vw"
                   loading="lazy"
                 />
               </div>

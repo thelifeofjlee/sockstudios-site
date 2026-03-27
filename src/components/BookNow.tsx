@@ -33,7 +33,7 @@ export default function BookNow() {
         <div className="grid md:grid-cols-2 gap-16">
           <div>
             <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">Book Now</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">Let&apos;s make<br />something happen.</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">Book Now</h2>
             <p className="text-white/60 mb-10 leading-relaxed">
               Fill out the form and we&apos;ll get back to you within 24 hours. Prefer to book instantly? Use Peerspace or Giggster.
             </p>

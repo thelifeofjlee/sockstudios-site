@@ -9,6 +9,18 @@ const config: Config = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }: { addUtilities: (utilities: Record<string, Record<string, string>>) => void }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+        },
+        '.scrollbar-hide::-webkit-scrollbar': {
+          display: 'none',
+        },
+      })
+    },
+  ],
 }
 export default config
