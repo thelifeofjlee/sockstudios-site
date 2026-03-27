@@ -4,20 +4,15 @@ import { useState } from 'react'
 import Image from 'next/image'
 
 const images = [
-  { src: '/images/DSCF7658.JPG', alt: 'Socks Studios interior view 1' },
-  { src: '/images/DSCF7695.JPG', alt: 'Socks Studios interior view 2' },
-  { src: '/images/DSCF7696.JPG', alt: 'Socks Studios interior view 3' },
-  { src: '/images/Elim Pan_ 2026-1.jpg', alt: 'Socks Studios photo 1' },
-  { src: '/images/Elim Pan_ 2026-2.jpg', alt: 'Socks Studios photo 2' },
-  { src: '/images/Elim Pan_ 2026-3.jpg', alt: 'Socks Studios photo 3' },
-  { src: '/images/Elim Pan_ 2026-5.jpg', alt: 'Socks Studios photo 5' },
-  { src: '/images/Elim Pan_ 2026-7.jpg', alt: 'Socks Studios photo 7' },
-  { src: '/images/Elim Pan_ 2026-10.jpg', alt: 'Socks Studios photo 10' },
-  { src: '/images/Elim Pan_ 2026-11.jpg', alt: 'Socks Studios photo 11' },
-  { src: '/images/Elim Pan_ 2026-12.jpg', alt: 'Socks Studios photo 12' },
-  { src: '/images/Elim Pan_ 2026-13.jpg', alt: 'Socks Studios photo 13' },
-  { src: '/images/Elim Pan_ 2026-15.jpg', alt: 'Socks Studios photo 15' },
-  { src: '/images/Elim Pan_ 2026-16.jpg', alt: 'Socks Studios photo 16' },
+  { src: '/images/Elim Pan_ 2026-1.jpg', alt: 'Socks Studios interior' },
+  { src: '/images/Elim Pan_ 2026-3.jpg', alt: 'Socks Studios space' },
+  { src: '/images/Elim Pan_ 2026-5.jpg', alt: 'Socks Studios natural light' },
+  { src: '/images/Elim Pan_ 2026-10.jpg', alt: 'Socks Studios open layout' },
+  { src: '/images/Elim Pan_ 2026-11.jpg', alt: 'Socks Studios exposed brick' },
+  { src: '/images/Elim Pan_ 2026-12.jpg', alt: 'Socks Studios loft' },
+  { src: '/images/Elim Pan_ 2026-13.jpg', alt: 'Socks Studios amenities' },
+  { src: '/images/Elim Pan_ 2026-15.jpg', alt: 'Socks Studios event setup' },
+  { src: '/images/Elim Pan_ 2026-16.jpg', alt: 'Socks Studios DTLA' },
 ]
 
 export default function Gallery() {

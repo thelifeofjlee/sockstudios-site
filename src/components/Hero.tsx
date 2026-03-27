@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative h-screen min-h-[600px] flex items-end pb-20">
       <Image
-        src="/images/DSCF7658.JPG"
+        src="/images/Elim Pan_ 2026-1.jpg"
         alt="Socks Studios interior"
         fill
         priority
