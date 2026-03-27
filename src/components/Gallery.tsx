@@ -1,0 +1,110 @@
+'use client'
+
+import { useState } from 'react'
+import Image from 'next/image'
+
+const images = [
+  { src: '/images/DSCF7658.JPG', alt: 'Socks Studios interior view 1' },
+  { src: '/images/DSCF7695.JPG', alt: 'Socks Studios interior view 2' },
+  { src: '/images/DSCF7696.JPG', alt: 'Socks Studios interior view 3' },
+  { src: '/images/Elim Pan_ 2026-1.jpg', alt: 'Socks Studios photo 1' },
+  { src: '/images/Elim Pan_ 2026-2.jpg', alt: 'Socks Studios photo 2' },
+  { src: '/images/Elim Pan_ 2026-3.jpg', alt: 'Socks Studios photo 3' },
+  { src: '/images/Elim Pan_ 2026-5.jpg', alt: 'Socks Studios photo 5' },
+  { src: '/images/Elim Pan_ 2026-7.jpg', alt: 'Socks Studios photo 7' },
+  { src: '/images/Elim Pan_ 2026-10.jpg', alt: 'Socks Studios photo 10' },
+  { src: '/images/Elim Pan_ 2026-11.jpg', alt: 'Socks Studios photo 11' },
+  { src: '/images/Elim Pan_ 2026-12.jpg', alt: 'Socks Studios photo 12' },
+  { src: '/images/Elim Pan_ 2026-13.jpg', alt: 'Socks Studios photo 13' },
+  { src: '/images/Elim Pan_ 2026-15.jpg', alt: 'Socks Studios photo 15' },
+  { src: '/images/Elim Pan_ 2026-16.jpg', alt: 'Socks Studios photo 16' },
+]
+
+export default function Gallery() {
+  const [lightbox, setLightbox] = useState<number | null>(null)
+
+  const openLightbox = (index: number) => setLightbox(index)
+  const closeLightbox = () => setLightbox(null)
+  const prev = () => setLightbox((i) => (i !== null ? (i - 1 + images.length) % images.length : null))
+  const next = () => setLightbox((i) => (i !== null ? (i + 1) % images.length : null))
+
+  return (
+    <section id="gallery" className="py-24 px-6 bg-[#111]">
+      <div className="max-w-7xl mx-auto">
+        <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">The Space</p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-16">See it for yourself.</h2>
+
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+          {images.map((img, i) => (
+            <div
+              key={img.src}
+              className="break-inside-avoid cursor-pointer overflow-hidden group"
+              onClick={() => openLightbox(i)}
+            >
+              <div className="relative w-full aspect-[4/3] bg-white/5">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Lightbox */}
+      {lightbox !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          onClick={closeLightbox}
+        >
+          <button
+            onClick={(e) => { e.stopPropagation(); prev() }}
+            className="absolute left-4 md:left-8 text-white/70 hover:text-white text-3xl font-light z-10 p-4"
+            aria-label="Previous image"
+          >
+            ‹
+          </button>
+
+          <div
+            className="relative w-full max-w-5xl max-h-[85vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={images[lightbox].src}
+              alt={images[lightbox].alt}
+              width={1400}
+              height={900}
+              className="object-contain w-full h-full max-h-[85vh]"
+              quality={95}
+            />
+          </div>
+
+          <button
+            onClick={(e) => { e.stopPropagation(); next() }}
+            className="absolute right-4 md:right-8 text-white/70 hover:text-white text-3xl font-light z-10 p-4"
+            aria-label="Next image"
+          >
+            ›
+          </button>
+
+          <button
+            onClick={closeLightbox}
+            className="absolute top-6 right-6 text-white/70 hover:text-white text-2xl z-10 p-2"
+            aria-label="Close"
+          >
+            ✕
+          </button>
+
+          <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/40 text-sm">
+            {lightbox + 1} / {images.length}
+          </p>
+        </div>
+      )}
+    </section>
+  )
+}
