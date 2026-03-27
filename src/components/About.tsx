@@ -17,7 +17,7 @@ export default function About() {
           </div>
           <div>
             <p className="text-white/70 text-lg leading-relaxed mb-10">
-              Open 24/7 | Central AC/Heat | Wi-Fi | No Noise Restrictions. 1,300 sq ft multipurpose creative space near Downtown Los Angeles built for almost anything. Photo/video shoots, parties, proposals, screenings, private events, pop-ups — you name it.
+              A renovated church turned 1,300 sq ft multipurpose creative space in Downtown Los Angeles — built for almost anything. Open 24/7 with central AC/heat, Wi-Fi, and zero noise restrictions. Photo/video shoots, parties, proposals, screenings, private events, pop-ups — you name it.
             </p>
             <div className="flex flex-wrap gap-3">
               {pills.map((pill) => (

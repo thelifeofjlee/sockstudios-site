@@ -1,6 +1,6 @@
 const included = [
   'Floor-to-ceiling windows with natural light',
-  'Exposed brick walls + open loft layout',
+  'Exposed brick walls + open loft layout — renovated church',
   'High ceilings',
   'Central AC & heat',
   'Private bathroom',
@@ -8,11 +8,18 @@ const included = [
   'Wi-Fi',
   'Ground-floor load-in access',
   'Clothing rack + large mirror (7×5 ft)',
-  '8.5 ft dining table with 6 chairs',
+  '8.5 ft dining table',
   'Seating area (3-seater couch, accent chairs, coffee table)',
-  'Cyc wall available',
-  'PA system / music speakers',
+  'Cyc wall',
+  'Single PA Music Speaker',
   '24/7 security cameras',
+]
+
+const addOns = [
+  'Fresh cyc wall repaint',
+  'Party / disco lights',
+  'Fog machine',
+  'Mood lights',
 ]
 
 const perfectFor = [
@@ -29,19 +36,33 @@ export default function Amenities() {
     <section id="amenities" className="py-24 px-6 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto">
         <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">Features & Amenities</p>
-        <h2 className="text-4xl md:text-5xl font-bold mb-16">Everything you need.</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-16">Features & Amenities</h2>
 
         <div className="grid md:grid-cols-2 gap-16">
-          <div>
-            <h3 className="text-xs tracking-[0.3em] uppercase text-white/40 mb-8">Included</h3>
-            <ul className="space-y-3">
-              {included.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-white/70">
-                  <span className="text-white/30 mt-0.5 flex-shrink-0">—</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="space-y-14">
+            <div>
+              <h3 className="text-xs tracking-[0.3em] uppercase text-white/40 mb-8">Included</h3>
+              <ul className="space-y-3">
+                {included.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-white/70">
+                    <span className="text-white/30 mt-0.5 flex-shrink-0">—</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xs tracking-[0.3em] uppercase text-white/40 mb-8">Available to Add-On or Rent</h3>
+              <ul className="space-y-3">
+                {addOns.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-white/50">
+                    <span className="text-white/20 mt-0.5 flex-shrink-0">+</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div>
