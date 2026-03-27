@@ -11,15 +11,19 @@ const included = [
   '8.5 ft dining table',
   'Seating area (3-seater couch, accent chairs, coffee table)',
   'Cyc wall',
-  'Single PA Music Speaker',
   '24/7 security cameras',
 ]
 
 const addOns = [
-  'Fresh cyc wall repaint',
-  'Party / disco lights',
-  'Fog machine',
-  'Mood lights',
+  { item: '6ft fold out plastic table', price: '$15/item' },
+  { item: 'Cyc wall repaint', price: '$50/item' },
+  { item: 'Overnight storage', price: '$500/item' },
+  { item: 'Plastic ice bucket', price: '$10/item' },
+  { item: 'DJ stand', price: '$50/item' },
+  { item: 'PA speaker', price: '$40/item' },
+  { item: 'Adjustable colored lights', price: '$20/item' },
+  { item: 'Flood lights', price: '$20/item' },
+  { item: 'Laser lights', price: '$40/item' },
 ]
 
 const perfectFor = [
@@ -55,10 +59,13 @@ export default function Amenities() {
             <div>
               <h3 className="text-xs tracking-[0.3em] uppercase text-white/40 mb-8">Available to Add-On or Rent</h3>
               <ul className="space-y-3">
-                {addOns.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-white/50">
-                    <span className="text-white/20 mt-0.5 flex-shrink-0">+</span>
-                    <span>{item}</span>
+                {addOns.map((addon) => (
+                  <li key={addon.item} className="flex items-center justify-between gap-4 text-white/50">
+                    <div className="flex items-start gap-3">
+                      <span className="text-white/20 mt-0.5 flex-shrink-0">+</span>
+                      <span>{addon.item}</span>
+                    </div>
+                    <span className="text-white/30 text-sm flex-shrink-0">{addon.price}</span>
                   </li>
                 ))}
               </ul>
