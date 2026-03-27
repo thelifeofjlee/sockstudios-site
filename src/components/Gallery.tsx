@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 
 const images = [
+  { src: '/images/Elim Pan_ 2026-15.jpg', alt: 'Socks Studios main space' },
   { src: '/images/Elim Pan_ 2026-1.jpg', alt: 'Socks Studios interior' },
   { src: '/images/Elim Pan_ 2026-3.jpg', alt: 'Socks Studios space' },
   { src: '/images/Elim Pan_ 2026-5.jpg', alt: 'Socks Studios natural light' },
@@ -11,8 +12,9 @@ const images = [
   { src: '/images/Elim Pan_ 2026-11.jpg', alt: 'Socks Studios exposed brick' },
   { src: '/images/Elim Pan_ 2026-12.jpg', alt: 'Socks Studios loft' },
   { src: '/images/Elim Pan_ 2026-13.jpg', alt: 'Socks Studios amenities' },
-  { src: '/images/Elim Pan_ 2026-15.jpg', alt: 'Socks Studios event setup' },
   { src: '/images/Elim Pan_ 2026-16.jpg', alt: 'Socks Studios DTLA' },
+  { src: '/images/screenshot-1.png', alt: 'Socks Studios setup' },
+  { src: '/images/screenshot-2.png', alt: 'Socks Studios event' },
 ]
 
 export default function Gallery() {

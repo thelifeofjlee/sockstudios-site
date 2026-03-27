@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Gallery from '@/components/Gallery'
+import FloorPlan from '@/components/FloorPlan'
 import Amenities from '@/components/Amenities'
 import Pricing from '@/components/Pricing'
 import BookNow from '@/components/BookNow'
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <About />
       <Gallery />
+      <FloorPlan />
       <Amenities />
       <Pricing />
       <BookNow />
