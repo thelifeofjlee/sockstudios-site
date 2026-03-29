@@ -19,7 +19,7 @@ export default function FloorPlan() {
           />
         </div>
         <p className="text-white/30 text-sm mt-6 text-center">
-          Questions about the layout? <a href="#book" className="text-white/60 hover:text-white underline underline-offset-4 transition-colors">Reach out</a> — we're happy to walk you through it.
+          Questions about the layout? <a href="#book" className="text-white/60 hover:text-white underline underline-offset-4 transition-colors">Reach out</a> — we&apos;re happy to walk you through it.
         </p>
       </div>
     </section>
