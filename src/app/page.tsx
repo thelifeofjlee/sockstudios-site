@@ -17,9 +17,9 @@ export default function Home() {
       <Hero />
       <About />
       <Gallery />
-      <FloorPlan />
       <Amenities />
       <Pricing />
+      <FloorPlan />
       <BookNow />
       <Availability />
       <FindUs />

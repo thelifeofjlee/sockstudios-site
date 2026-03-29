@@ -36,17 +36,17 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right: Perfect For */}
+          {/* Right: Perfect For — compact 2-col grid */}
           <div>
-            <h3 className="text-xs tracking-[0.3em] uppercase text-white/40 mb-8">Perfect For</h3>
-            <ul className="space-y-6">
+            <h3 className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">Perfect For</h3>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
               {perfectFor.map((item) => (
-                <li key={item.category}>
-                  <p className="text-white font-semibold mb-1">{item.category}</p>
-                  <p className="text-white/50 text-sm">{item.detail}</p>
-                </li>
+                <div key={item.category} className="flex items-start gap-2">
+                  <span className="text-white/20 mt-1 flex-shrink-0">—</span>
+                  <span className="text-white/70 text-sm leading-snug">{item.category}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>
