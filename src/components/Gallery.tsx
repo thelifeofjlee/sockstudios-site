@@ -15,8 +15,8 @@ const images = [
   { src: '/images/Elim Pan_ 2026-16.jpg', alt: 'Socks Studios DTLA' },
   // Additional photos — bottom row
   { src: '/images/DSCF7695.JPG', alt: 'Socks Studios additional view' },
-  { src: '/images/screenshot-1.png', alt: 'Socks Studios setup' },
-  { src: '/images/screenshot-2.png', alt: 'Socks Studios event' },
+  { src: '/images/screenshot-1.jpg', alt: 'Socks Studios setup' },
+  { src: '/images/screenshot-2.jpg', alt: 'Socks Studios event' },
 ]
 
 export default function Gallery() {

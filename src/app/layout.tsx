@@ -6,19 +6,19 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Socks Studios | Creative Space Rental in DTLA Los Angeles',
-  description: '1,300 sq ft multipurpose studio space in Downtown Los Angeles. Perfect for photo shoots, video productions, private events, and more. Open 24/7. No noise restrictions.',
+  description: '1,300 sq ft multipurpose creative space in Downtown Los Angeles. Photo shoots, video productions, private events, and more. Open 24/7. No noise restrictions.',
   metadataBase: new URL('https://sockstudios.la'),
   openGraph: {
-    title: 'Socks Studios | Creative Space Rental in DTLA Los Angeles',
-    description: '1,300 sq ft multipurpose studio space in Downtown Los Angeles. Perfect for photo shoots, video productions, private events, and more. Open 24/7. No noise restrictions.',
+    title: 'Socks Studios — Los Angeles',
+    description: '1,300 sq ft creative space in DTLA. Open 24/7. No noise restrictions. Perfect for shoots, events, and more.',
     url: 'https://sockstudios.la',
     siteName: 'Socks Studios',
     images: [
       {
-        url: '/images/DSCF7658.JPG',
-        width: 1200,
-        height: 630,
-        alt: 'Socks Studios - Creative Space in DTLA',
+        url: '/images/Elim Pan_ 2026-15.jpg',
+        width: 1800,
+        height: 1200,
+        alt: 'Socks Studios - Creative Space in DTLA Los Angeles',
       },
     ],
     locale: 'en_US',
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Socks Studios | Creative Space Rental in DTLA Los Angeles',
-    description: '1,300 sq ft multipurpose studio space in Downtown Los Angeles.',
-    images: ['/images/DSCF7658.JPG'],
+    title: 'Socks Studios — Los Angeles',
+    description: '1,300 sq ft creative space in DTLA. Open 24/7. No noise restrictions.',
+    images: ['/images/Elim Pan_ 2026-15.jpg'],
   },
   alternates: {
     canonical: 'https://sockstudios.la',
@@ -61,7 +61,7 @@ export default function RootLayout({
                 addressCountry: 'US',
               },
               openingHours: 'Mo-Su 00:00-24:00',
-              image: 'https://sockstudios.la/images/DSCF7658.JPG',
+              image: 'https://sockstudios.la/images/Elim Pan_ 2026-15.jpg',
             }),
           }}
         />
