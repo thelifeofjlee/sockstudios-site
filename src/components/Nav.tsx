@@ -35,21 +35,20 @@ export default function Nav() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#" className="flex items-center">
-          {logoExists ? (
+        {/* Logo + Wordmark */}
+        <a href="#" className="flex items-center gap-3">
+          {logoExists && (
             <Image
               src="/images/socks-logo.png"
-              alt="Socks Studios"
-              width={120}
-              height={40}
-              className="object-contain h-10 w-auto"
+              alt="Socks Studios logo"
+              width={36}
+              height={36}
+              className="object-contain w-9 h-9"
             />
-          ) : (
-            <span className="text-white font-bold text-xl tracking-[0.2em] uppercase">
-              SOCKS STUDIOS
-            </span>
           )}
+          <span className="text-white font-bold text-xl tracking-[0.2em] uppercase">
+            SOCKS STUDIOS
+          </span>
         </a>
 
         {/* Desktop nav */}

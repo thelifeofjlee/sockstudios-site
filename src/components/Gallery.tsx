@@ -28,7 +28,7 @@ export default function Gallery() {
   const next = () => setLightbox((i) => (i !== null ? (i + 1) % images.length : null))
 
   return (
-    <section id="gallery" className="py-24 px-6 bg-[#111]">
+    <section id="gallery" className="py-24 px-6 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto">
         <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">The Space</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-16">The Space</h2>

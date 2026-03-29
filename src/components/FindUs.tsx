@@ -13,7 +13,7 @@ export default function FindUs() {
             <div className="space-y-4">
               <div>
                 <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-2">Parking</p>
-                <p className="text-white/70">30 paid parking spaces directly across the street. Free street parking nearby.</p>
+                <p className="text-white/70">Tons of free street parking in the area. Paid parking lot directly across the street.</p>
               </div>
               <div>
                 <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-2">Area</p>

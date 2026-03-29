@@ -1,6 +1,6 @@
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 px-6 bg-[#111]">
+    <section id="pricing" className="py-24 px-6 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto">
         <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">Pricing</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-16">Rates</h2>
@@ -24,7 +24,7 @@ export default function Pricing() {
           </div>
 
           {/* Weekends */}
-          <div className="border border-white/10 p-10 bg-white/[0.02]">
+          <div className="border border-white/10 p-10">
             <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-4">Weekends</p>
             <p className="text-5xl font-bold mb-2">$120<span className="text-2xl font-normal text-white/50">/hr</span></p>
             <p className="text-white/40 text-sm mb-8">Base rate</p>
