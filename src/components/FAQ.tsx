@@ -52,8 +52,8 @@ const faqs = [
     a: '50% refund if cancelled 7 or more days before the event. No refund for cancellations within 7 days of the event.',
   },
   {
-    q: 'How does the security deposit work?',
-    a: 'A $300 refundable security deposit is required for all bookings regardless of platform. It is collected upfront and returned within 5 business days after your event if there is no damage or rule violations.',
+    q: 'How does payment work?',
+    a: 'To hold your date, we require 50% of the total rental fee + the $180 cleaning fee + a $300 refundable security deposit at signing. The remaining 50% of the rental fee is due 3 days before the event. The $300 deposit is returned within 5 business days after your event if there is no damage or rule violations.',
   },
   {
     q: 'Is there a cleaning fee?',

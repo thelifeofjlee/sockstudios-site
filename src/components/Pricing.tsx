@@ -48,6 +48,7 @@ export default function Pricing() {
           <div>
             <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-2">Security Deposit</p>
             <p className="text-2xl font-bold">$300 <span className="text-sm font-normal text-white/50">refundable</span></p>
+            <p className="text-white/30 text-xs mt-1">50% + deposit due at signing · balance due 3 days before</p>
           </div>
           <div>
             <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-2">Minimum Booking</p>

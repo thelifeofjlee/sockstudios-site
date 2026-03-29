@@ -38,9 +38,11 @@ sockstudios.la@gmail.com
 |---|---|
 | Hourly Rate | $[100 / 120] × [X] hours = $[SUBTOTAL] |
 | Guest Surcharge (if applicable) | $[0 / 20 / 40]/hr × [X] hours = $[SURCHARGE] |
+| **Total Rental Fee** | **$[RENTAL TOTAL]** |
 | Cleaning Fee | $180.00 |
 | Security Deposit (refundable) | $300.00 |
-| **Total Due** | **$[TOTAL]** |
+| **Due at Signing** | **50% rental ($[X]) + $180 cleaning + $300 deposit = $[DUE NOW]** |
+| **Due 3 Days Before Event** | **Remaining 50% rental = $[DUE LATER]** |
 
 ### Hourly Rates
 
@@ -54,9 +56,15 @@ sockstudios.la@gmail.com
 
 ## Payment Terms
 
-1. **Security Deposit:** $300 is due at the time of signing to hold the reservation. This deposit is fully refundable (see Security Deposit section below).
+1. **To Hold the Date (due at signing):**
+   - 50% of the total rental fee
+   - $180 cleaning fee (in full)
+   - $300 refundable security deposit
+   - **Total due at signing: $[50% RENTAL + $180 + $300]**
 
-2. **Rental Fee + Cleaning Fee:** The full rental fee and $180 cleaning fee are due no later than **24 hours before the event start time**. Failure to pay by this deadline may result in cancellation of the reservation without refund of the deposit.
+2. **To Confirm the Event (due 3 days before):**
+   - Remaining 50% of the total rental fee
+   - Failure to pay by this deadline may result in cancellation of the reservation without refund of the initial payment or deposit.
 
 3. **Accepted Payment Methods:** Zelle, Venmo, bank transfer, or other method agreed upon in writing.
 
