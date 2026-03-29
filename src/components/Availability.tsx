@@ -7,7 +7,7 @@ export default function Availability() {
 
         <div className="w-full bg-white/5 border border-white/10 overflow-hidden">
           <iframe
-            src="GOOGLE_CALENDAR_EMBED_URL"
+            src="https://calendar.google.com/calendar/embed?src=sockstudiosla%40gmail.com&ctz=America%2FLos_Angeles"
             style={{ border: 0 }}
             width="100%"
             height="600"
