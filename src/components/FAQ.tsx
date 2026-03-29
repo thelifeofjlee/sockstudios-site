@@ -75,8 +75,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-16 px-6 bg-[#0a0a0a]">
       <div className="max-w-4xl mx-auto">
-        <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">FAQ</p>
-        <h2 className="text-4xl md:text-5xl font-bold mb-10">Common questions.</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-10">FAQ</h2>
 
         <div className="divide-y divide-white/10">
           {faqs.map((faq, i) => (

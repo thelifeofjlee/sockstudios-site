@@ -30,7 +30,6 @@ export default function Gallery() {
   return (
     <section id="gallery" className="py-16 px-6 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto">
-        <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">The Space</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-10">The Space</h2>
 
         {/* Mobile: horizontal swipe carousel */}

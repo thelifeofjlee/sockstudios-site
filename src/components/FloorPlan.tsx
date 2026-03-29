@@ -4,7 +4,6 @@ export default function FloorPlan() {
   return (
     <section id="floorplan" className="py-16 px-6 bg-[#0a0a0a]">
       <div className="max-w-5xl mx-auto">
-        <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">Layout</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-6">Floor Plan</h2>
         <p className="text-white/50 text-lg mb-14 max-w-2xl">
           1,300 sq ft open floor plan — easy to customize for any setup. Ground-floor load-in access, private bathroom, hair & makeup area, and a dedicated cyc wall.

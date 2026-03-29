@@ -20,7 +20,6 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Left: description + pills */}
           <div>
-            <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">About</p>
             <p className="text-white/70 text-lg leading-relaxed mb-10">
               A renovated church turned 1,300 sq ft multipurpose creative space in Downtown Los Angeles — built for almost anything. Open 24/7 with central AC/heat, Wi-Fi, and zero noise restrictions. Photo/video shoots, parties, proposals, screenings, private events, pop-ups — you name it.
             </p>

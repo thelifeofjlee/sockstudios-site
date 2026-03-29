@@ -2,7 +2,6 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-16 px-6 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto">
-        <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">Pricing</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-10">Rates</h2>
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
