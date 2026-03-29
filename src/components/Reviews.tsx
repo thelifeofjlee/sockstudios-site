@@ -1,24 +1,24 @@
 const reviews = [
   {
-    name: 'Marcus T.',
+    name: 'Joshua B.',
     platform: 'Peerspace',
     rating: 5,
-    text: 'Incredible space. The natural light is unreal for shoots and the host was super easy to work with. Will definitely be back.',
-    type: 'Photo Shoot',
+    text: "We hosted our engagement party here and couldn't have asked for a better experience! The space itself was beautiful and versatile — the white wall and large mirror made for amazing photo opportunities, while the exposed brick wall and high ceilings created the perfect backdrop. It comfortably fit our 50 guests with a taco bar, seating areas, a cake table, and still left plenty of room for dancing. Everything came together seamlessly. Highly recommend!",
+    type: 'Event for 50 people',
   },
   {
-    name: 'Destiny R.',
+    name: 'Joshua A.',
     platform: 'Peerspace',
     rating: 5,
-    text: 'We hosted a private birthday event here and it was perfect. Great vibe, easy load-in, and the location is so central. No noise issues at all.',
-    type: 'Private Event',
+    text: "This venue exceeded my expectations!! It was exactly as pictured, equipped with everything we needed. Jerry was the absolute best — quick and efficient with every question. I would love to host events here more and would definitely book again.",
+    type: 'Event for 35 people',
   },
   {
-    name: 'James W.',
-    platform: 'Giggster',
+    name: 'Elan B.',
+    platform: 'Peerspace',
     rating: 5,
-    text: 'The renovated church aesthetic is unlike anything else in DTLA. Open 24/7 was a game changer for our overnight production.',
-    type: 'Video Production',
+    text: "The space was excellent and Jerry was great to work with. The whole experience was very easy! We used the space to film an interview and there was plenty of room for equipment and crew. The space was tidy and looked great on camera. I'd be happy to shoot here again and I'd definitely keep it in mind for an event too.",
+    type: 'Production for 25 people',
   },
 ]
 
