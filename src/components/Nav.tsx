@@ -1,15 +1,25 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [logoExists, setLogoExists] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    // Check if logo image loads
+    const img = new window.Image()
+    img.onload = () => setLogoExists(true)
+    img.onerror = () => setLogoExists(false)
+    img.src = '/images/socks-logo.png'
   }, [])
 
   const links = [
@@ -25,8 +35,21 @@ export default function Nav() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-        <a href="#" className="text-white font-bold text-xl tracking-[0.2em] uppercase">
-          SOCKS STUDIOS
+        {/* Logo */}
+        <a href="#" className="flex items-center">
+          {logoExists ? (
+            <Image
+              src="/images/socks-logo.png"
+              alt="Socks Studios"
+              width={120}
+              height={40}
+              className="object-contain h-10 w-auto"
+            />
+          ) : (
+            <span className="text-white font-bold text-xl tracking-[0.2em] uppercase">
+              SOCKS STUDIOS
+            </span>
+          )}
         </a>
 
         {/* Desktop nav */}
@@ -45,6 +68,20 @@ export default function Nav() {
             className="bg-white text-black text-sm font-semibold tracking-widest uppercase px-5 py-2.5 hover:bg-[#f0ebe0] transition-colors"
           >
             Book Now
+          </a>
+          {/* Instagram */}
+          <a
+            href="https://www.instagram.com/sockstudios.la/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="text-white/60 hover:text-white transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
           </a>
         </div>
 
@@ -79,6 +116,19 @@ export default function Nav() {
             className="bg-white text-black text-sm font-semibold tracking-widest uppercase px-5 py-3 text-center"
           >
             Book Now
+          </a>
+          <a
+            href="https://www.instagram.com/sockstudios.la/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 text-white/60 text-sm tracking-widest uppercase"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+            Instagram
           </a>
         </div>
       )}
