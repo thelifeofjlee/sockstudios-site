@@ -5,6 +5,8 @@ import Gallery from '@/components/Gallery'
 import FloorPlan from '@/components/FloorPlan'
 import Amenities from '@/components/Amenities'
 import Pricing from '@/components/Pricing'
+import Reviews from '@/components/Reviews'
+import FAQ from '@/components/FAQ'
 import BookNow from '@/components/BookNow'
 import Availability from '@/components/Availability'
 import FindUs from '@/components/FindUs'
@@ -20,6 +22,8 @@ export default function Home() {
       <Amenities />
       <Pricing />
       <FloorPlan />
+      <Reviews />
+      <FAQ />
       <BookNow />
       <Availability />
       <FindUs />
