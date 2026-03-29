@@ -1,6 +1,6 @@
 export default function FindUs() {
   return (
-    <section id="find-us" className="py-24 px-6 bg-[#0a0a0a]">
+    <section id="find-us" className="py-16 px-6 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto">
         <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">Location</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-4">Find Us</h2>

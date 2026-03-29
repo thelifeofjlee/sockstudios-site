@@ -24,11 +24,11 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="py-24 px-6 bg-[#0a0a0a]">
+    <section id="reviews" className="py-16 px-6 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto">
         <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">Reviews</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-4">What people are saying.</h2>
-        <p className="text-white/40 text-sm mb-16">5.0 ★ across Peerspace & Giggster</p>
+        <p className="text-white/40 text-sm mb-10">5.0 ★ across Peerspace & Giggster</p>
 
         <div className="grid sm:grid-cols-3 gap-6">
           {reviews.map((r) => (

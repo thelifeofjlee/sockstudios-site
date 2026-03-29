@@ -28,7 +28,7 @@ export default function BookNow() {
   }
 
   return (
-    <section id="book" className="py-24 px-6 bg-[#0a0a0a]">
+    <section id="book" className="py-16 px-6 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16">
           <div>

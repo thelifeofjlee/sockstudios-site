@@ -1,6 +1,6 @@
 export default function Availability() {
   return (
-    <section id="availability" className="py-24 px-6 bg-[#0a0a0a]">
+    <section id="availability" className="py-16 px-6 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto">
         <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">Availability</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-4">Check Availability</h2>

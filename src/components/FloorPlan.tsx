@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function FloorPlan() {
   return (
-    <section id="floorplan" className="py-24 px-6 bg-[#0a0a0a]">
+    <section id="floorplan" className="py-16 px-6 bg-[#0a0a0a]">
       <div className="max-w-5xl mx-auto">
         <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-6">Layout</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-6">Floor Plan</h2>
