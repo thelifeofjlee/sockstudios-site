@@ -21,11 +21,11 @@ export default function Home() {
       <Gallery />
       <Amenities />
       <Pricing />
-      <FloorPlan />
       <Reviews />
-      <FAQ />
       <BookNow />
       <Availability />
+      <FAQ />
+      <FloorPlan />
       <FindUs />
       <Footer />
     </main>

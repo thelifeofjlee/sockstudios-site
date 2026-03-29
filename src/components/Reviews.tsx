@@ -14,32 +14,11 @@ const reviews = [
     type: 'Private Event',
   },
   {
-    name: 'Andre L.',
-    platform: 'Giggster',
-    rating: 5,
-    text: 'Shot a music video here — the exposed brick and high ceilings gave us exactly the aesthetic we needed. Super flexible space.',
-    type: 'Video Production',
-  },
-  {
-    name: 'Priya K.',
-    platform: 'Peerspace',
-    rating: 5,
-    text: 'Used it for a brand pop-up and it was seamless. Plenty of room, great lighting, and the cyc wall was a huge plus for our content team.',
-    type: 'Pop-Up',
-  },
-  {
     name: 'James W.',
     platform: 'Giggster',
     rating: 5,
     text: 'The renovated church aesthetic is unlike anything else in DTLA. Open 24/7 was a game changer for our overnight production.',
     type: 'Video Production',
-  },
-  {
-    name: 'Tiffany M.',
-    platform: 'Peerspace',
-    rating: 5,
-    text: 'Clean, well-maintained, and the host responded fast to every question. The space looks even better in person than in the photos.',
-    type: 'Photo Shoot',
   },
 ]
 
@@ -51,7 +30,7 @@ export default function Reviews() {
         <h2 className="text-4xl md:text-5xl font-bold mb-4">What people are saying.</h2>
         <p className="text-white/40 text-sm mb-16">5.0 ★ across Peerspace & Giggster</p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-3 gap-6">
           {reviews.map((r) => (
             <div key={r.name} className="border border-white/10 p-8 flex flex-col gap-4">
               <div className="flex items-center gap-1">
