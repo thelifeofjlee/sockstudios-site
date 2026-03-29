@@ -23,7 +23,7 @@ export default function FindUs() {
 
           <div className="w-full bg-white/5 border border-white/10 overflow-hidden aspect-video">
             <iframe
-              src="GOOGLE_MAPS_EMBED_URL"
+              src="https://maps.google.com/maps?q=1598+Oak+Street+Los+Angeles+CA+90015&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
