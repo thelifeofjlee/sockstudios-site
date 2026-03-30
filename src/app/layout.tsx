@@ -33,6 +33,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://sockstudios.la',
   },
+  icons: {
+    icon: '/favicon.png',
+    apple: '/apple-touch-icon.png',
+  },
 }
 
 export default function RootLayout({
