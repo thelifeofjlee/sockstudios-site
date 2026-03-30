@@ -124,8 +124,8 @@ export default function BookNow() {
                     </select>
                   </div>
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  <div className="col-span-2 sm:col-span-1">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div>
                     <label className="text-xs tracking-widest uppercase text-white/40 block mb-2">Date *</label>
                     <input
                       name="date"
