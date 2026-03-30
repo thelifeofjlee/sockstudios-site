@@ -13,7 +13,10 @@ export default function BookNow() {
     const data = new FormData(form)
 
     try {
-      const res = await fetch('https://formspree.io/f/FORMSPREE_ID', {
+      data.append('access_key', 'e067bd11-5364-43c4-b38e-697d51a213a5')
+      data.append('subject', 'New Booking Inquiry — Socks Studios')
+      data.append('from_name', 'Socks Studios Website')
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: data,
         headers: { Accept: 'application/json' },
