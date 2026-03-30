@@ -3,28 +3,31 @@
 import { useState } from 'react'
 
 export default function BookNow() {
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setStatus('sending')
+
     const form = e.currentTarget
     const data = new FormData(form)
-    const name = data.get('name')
-    const email = data.get('email')
-    const phone = data.get('phone')
-    const eventType = data.get('eventType')
-    const date = data.get('date')
-    const guests = data.get('guests')
-    const hours = data.get('hours')
-    const message = data.get('message')
 
-    const subject = encodeURIComponent(`Booking Inquiry - ${eventType} on ${date}`)
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nEvent Type: ${eventType}\nDate: ${date}\nGuest Count: ${guests}\nHours Needed: ${hours}\n\nMessage:\n${message}`
-    )
+    try {
+      const res = await fetch('https://formspree.io/f/FORMSPREE_ID', {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
 
-    window.location.href = `mailto:sockstudios.la@gmail.com?subject=${subject}&body=${body}`
-    setSubmitted(true)
+      if (res.ok) {
+        setStatus('sent')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -47,7 +50,7 @@ export default function BookNow() {
                 Book on Peerspace
               </a>
               <a
-                href="https://giggster.com"
+                href="https://giggster.com/listing/renovated-church-venue-photo-party-events-natural"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-white/70 hover:text-white transition-colors text-sm"
@@ -59,7 +62,7 @@ export default function BookNow() {
           </div>
 
           <div>
-            {submitted ? (
+            {status === 'sent' ? (
               <div className="border border-white/10 p-10 text-center">
                 <p className="text-2xl font-bold mb-3">Inquiry sent!</p>
                 <p className="text-white/60">We&apos;ll be in touch within 24 hours.</p>
@@ -78,7 +81,7 @@ export default function BookNow() {
                     />
                   </div>
                   <div>
-                    <label className="text-xs tracking-widests uppercase text-white/40 block mb-2">Email *</label>
+                    <label className="text-xs tracking-widest uppercase text-white/40 block mb-2">Email *</label>
                     <input
                       name="email"
                       required
@@ -90,9 +93,10 @@ export default function BookNow() {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs tracking-widest uppercase text-white/40 block mb-2">Phone</label>
+                    <label className="text-xs tracking-widest uppercase text-white/40 block mb-2">Phone *</label>
                     <input
                       name="phone"
+                      required
                       type="tel"
                       className="w-full bg-white/5 border border-white/10 text-white px-4 py-3 text-sm focus:outline-none focus:border-white/30 transition-colors"
                       placeholder="(310) 000-0000"
@@ -108,6 +112,7 @@ export default function BookNow() {
                       <option value="" className="bg-[#0a0a0a]">Select type</option>
                       <option value="Photo Shoot" className="bg-[#0a0a0a]">Photo Shoot</option>
                       <option value="Video Production" className="bg-[#0a0a0a]">Video Production</option>
+                      <option value="Party" className="bg-[#0a0a0a]">Party</option>
                       <option value="Private Event" className="bg-[#0a0a0a]">Private Event</option>
                       <option value="Corporate Event" className="bg-[#0a0a0a]">Corporate Event</option>
                       <option value="Pop-Up" className="bg-[#0a0a0a]">Pop-Up</option>
@@ -132,7 +137,7 @@ export default function BookNow() {
                       name="guests"
                       type="number"
                       min="1"
-                      max="100"
+                      max="150"
                       className="w-full bg-white/5 border border-white/10 text-white px-4 py-3 text-sm focus:outline-none focus:border-white/30 transition-colors"
                       placeholder="# guests"
                     />
@@ -158,11 +163,15 @@ export default function BookNow() {
                     placeholder="Tell us about your event..."
                   />
                 </div>
+                {status === 'error' && (
+                  <p className="text-red-400 text-sm">Something went wrong. Please email us directly at sockstudiosla@gmail.com</p>
+                )}
                 <button
                   type="submit"
-                  className="w-full bg-white text-black font-semibold text-sm tracking-widest uppercase py-4 hover:bg-[#f0ebe0] transition-colors"
+                  disabled={status === 'sending'}
+                  className="w-full bg-white text-black font-semibold text-sm tracking-widest uppercase py-4 hover:bg-[#f0ebe0] transition-colors disabled:opacity-50"
                 >
-                  Send Inquiry
+                  {status === 'sending' ? 'Sending...' : 'Send Inquiry'}
                 </button>
                 <p className="text-white/30 text-xs text-center">
                   We&apos;ll respond within 24 hours.
