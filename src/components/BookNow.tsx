@@ -4,6 +4,14 @@ import { useState } from 'react'
 
 export default function BookNow() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const today = new Date().toISOString().split('T')[0]
+
+  const formatPhone = (val: string) => {
+    const digits = val.replace(/\D/g, '').slice(0, 10)
+    if (digits.length <= 3) return digits
+    if (digits.length <= 6) return digits.slice(0,3) + '-' + digits.slice(3)
+    return digits.slice(0,3) + '-' + digits.slice(3,6) + '-' + digits.slice(6)
+  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -101,8 +109,10 @@ export default function BookNow() {
                       name="phone"
                       required
                       type="tel"
+                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                       className="w-full bg-white/5 border border-white/10 text-white px-4 py-3 text-sm focus:outline-none focus:border-white/30 transition-colors"
-                      placeholder="(310) 000-0000"
+                      placeholder="xxx-xxx-xxxx"
+                      onChange={(e) => { e.target.value = formatPhone(e.target.value) }}
                     />
                   </div>
                   <div>
@@ -131,6 +141,7 @@ export default function BookNow() {
                       name="date"
                       required
                       type="date"
+                      min={today}
                       className="w-full bg-white/5 border border-white/10 text-white px-4 py-3 text-sm focus:outline-none focus:border-white/30 transition-colors"
                     />
                   </div>
@@ -138,6 +149,7 @@ export default function BookNow() {
                     <label className="text-xs tracking-widest uppercase text-white/40 block mb-2">Guests</label>
                     <input
                       name="guests"
+                      required
                       type="number"
                       min="1"
                       max="150"
@@ -158,9 +170,10 @@ export default function BookNow() {
                   </div>
                 </div>
                 <div>
-                  <label className="text-xs tracking-widest uppercase text-white/40 block mb-2">Message</label>
+                  <label className="text-xs tracking-widest uppercase text-white/40 block mb-2">About Your Event *</label>
                   <textarea
                     name="message"
+                    required
                     rows={4}
                     className="w-full bg-white/5 border border-white/10 text-white px-4 py-3 text-sm focus:outline-none focus:border-white/30 transition-colors resize-none"
                     placeholder="Tell us about your event..."
