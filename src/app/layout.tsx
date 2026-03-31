@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: '1,300 sq ft multipurpose creative space in Downtown Los Angeles. Photo shoots, video productions, private events, and more. Open 24/7. No noise restrictions.',
   metadataBase: new URL('https://sockstudios.la'),
   openGraph: {
-    title: 'Socks Studios — Los Angeles',
+    title: 'Socks Studios | Creative Space in DTLA Los Angeles',
     description: '1,300 sq ft creative space in DTLA. Open 24/7. No noise restrictions. Perfect for shoots, events, and more.',
     url: 'https://sockstudios.la',
     siteName: 'Socks Studios',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Socks Studios — Los Angeles',
+    title: 'Socks Studios | Creative Space in DTLA Los Angeles',
     description: '1,300 sq ft creative space in DTLA. Open 24/7. No noise restrictions.',
     images: ['/images/Elim Pan_ 2026-15.jpg'],
   },
